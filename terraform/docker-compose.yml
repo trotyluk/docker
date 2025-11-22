@@ -1,0 +1,9 @@
+services:
+  terraform:
+    image: hashicorp/terraform:latest
+    container_name: terraform
+    volumes:
+      - .:/terraform
+    working_dir: /terraform
+    command: tail -f /dev/null  
+    network_mode: host
